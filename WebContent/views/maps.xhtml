@@ -13,7 +13,8 @@
     	<h2>JSF 2.0 Hello World Example - hello.xhtml</h2>
     	<h:form>
     	   <h:inputText var="map" value="#{mapBean.endereco}"></h:inputText>
-    	   <h:commandButton value="search" action="#{mapBean.search(map.endereco)}"></h:commandButton>
+    	   <h:inputText var="map" value="#{mapBean.cidade}"></h:inputText>
+    	   <h:commandButton  value="search" action="#{mapBean.search()}"></h:commandButton>
     	</h:form>
     </h:body>
 </html>

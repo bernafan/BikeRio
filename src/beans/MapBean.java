@@ -12,6 +12,7 @@ import br.com.bikerio.services.RestApiBikeRio;
 
 public class MapBean {
 	private String endereco;
+	private String cidade;
 	private RestApiBikeRio restApi = new RestApiBikeRio();
 	@PostConstruct
 	public void init() {
@@ -26,8 +27,16 @@ public class MapBean {
 		this.endereco = endereco;
 	}
 	
-	public void search(String endereco) {
-	
-		 restApi.search(endereco);;
+	public void search() {
+		
+		 restApi.search(this.endereco, this.cidade);
+	}
+
+	public String getCidade() {
+		return cidade;
+	}
+
+	public void setCidade(String cidade) {
+		this.cidade = cidade;
 	}
 }

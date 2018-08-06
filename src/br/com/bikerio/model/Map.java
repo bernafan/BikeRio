@@ -1,11 +1,10 @@
 package br.com.bikerio.model;
 
-import org.codehaus.jackson.annotate.JsonProperty;
 
 public class Map {
-	@JsonProperty("COLUMNS")
+	
 	private String column;
-	@JsonProperty("DATA")
+	
 	private String data;
 	
 	
