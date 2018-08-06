@@ -31,12 +31,12 @@ public class RestApiBikeRio {
 	
 	public void search(String endereco, String cidade) {
 		String cidadeFormat = cidade.trim().replace(" ", "%20");
-		String endFormat = cidade.trim().replace(" ", "%20");
+		String endFormat = endereco.trim().replace(" ", "%20");
 		System.out.println(cidadeFormat + " " + endFormat);
 		Client client = Client.create();
 		WebResource webResource = client.resource("https://nominatim.openstreetmap.org/search?street="+ endFormat+ "&city="+ cidadeFormat + "&format=json&polygon=1&addressdetails=1");
 		String json = webResource.get(String.class);
-		
+		System.out.println(json);
 		
 	}
 }
