@@ -73,27 +73,12 @@
     </script>
   </head>
   <body>
+  	<form action="../BikeRio/api/formulario" method="POST">
+    		<label for="end">Endereço:</label>
+    		<input name="end" />
   
-  
-  
-  
-  	<!-- <form class="form-inline" role="search" accept-charset="UTF-8" action="https://nominatim.openstreetmap.org/search.php">
-        <div class="form-group">
-            <input id="q" name="q" type="text" class="form-control input-sm" placeholder="Search" value="">
-        </div>
-        <div class="form-group search-button-group">
-            <button type="submit" class="btn btn-primary btn-sm">Search</button>
-                            <input type="hidden" value="1" name="polygon_geojson">
-                        <input type="hidden" name="viewbox" value="">
-            <div class="checkbox-inline">
-                <input type="checkbox" id="use_viewbox">
-                <label for="use_viewbox">apply viewbox</label>
-            </div>
-        </div>
-        <div class="search-type-link">
-            <a id="switch-to-reverse" href="reverse.php?format=html">reverse search</a>
-        </div>
-    </form> -->
+    <button type="submit" onclick="UserAction()">Search</button>
+    </form>
   
   
     <div id="map"></div>

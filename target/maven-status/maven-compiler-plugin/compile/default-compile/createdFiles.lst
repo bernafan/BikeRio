@@ -1,0 +1,5 @@
+br/com/bikerio/model/NOta.class
+br/com/bikerio/services/RestApiBikeRio.class
+br/com/bikerio/model/Map.class
+br/com/bikerio/services/MapService.class
+br/com/bikerio/services/RestApiBikeRio$1.class

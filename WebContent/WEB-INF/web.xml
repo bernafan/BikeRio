@@ -4,22 +4,17 @@
           http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
 	version="3.0">
 	<display-name>CrunchifyRESTJerseyExample</display-name>
-	<welcome-file-list>
-		<welcome-file>index.html</welcome-file>
-		<welcome-file>index.htm</welcome-file>
-		<welcome-file>index.jsp</welcome-file>
-		<welcome-file>default.html</welcome-file>
-		<welcome-file>default.htm</welcome-file>
-		<welcome-file>default.jsp</welcome-file>
-	</welcome-file-list>
  
 	<servlet>
-		<servlet-name>Jersey Web Application</servlet-name>
-		<servlet-class>com.sun.jersey.spi.container.servlet.ServletContainer</servlet-class>
+		<servlet-name>faces-servlet</servlet-name>
+		<servlet-class>javax.faces.webapp.FacesServlet</servlet-class>
 		<load-on-startup>1</load-on-startup>
 	</servlet>
+	
 	<servlet-mapping>
-		<servlet-name>Jersey Web Application</servlet-name>
-		<url-pattern>/api/*</url-pattern>
+		<servlet-name>faces-servlet</servlet-name>
+		<url-pattern>*.xhtml</url-pattern>
 	</servlet-mapping>
+ 	
+	
 </web-app>
