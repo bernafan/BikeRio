@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://java.sun.com/jsf/core"      
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+	
+    <h:head>
+      
+    </h:head>
+    <h:body>
+    	
+    	
+    	<h:outputLabel>Latitude do Usuário:</h:outputLabel>
+    	   <h:outputText var="userBean" value="#{userCoordBean.user.lat}"></h:outputText>
+    	   <h:outputLabel>CidaLongitude do usuário:</h:outputLabel>
+    	   <h:outputText var="userBean" value="#{userCoordBean.user.lon}"></h:outputText>
+    		
+    		<p:dataTable var="bike" value="#{bikeCoordBean.bikes}">
+    		<p:column>
+    			<f:facet name="header">
+    				<h:outputText value="Latitude da bike"></h:outputText>
+    			</f:facet>
+    			<h:outputText value="#{bike.bikeCoordLat}"></h:outputText>
+    		</p:column>
+    		<p:column>
+    			<f:facet name="header">
+    				<h:outputText value="Longitude da bike"></h:outputText>
+    			</f:facet>
+    			<h:outputText value="#{bike.bikeCoordLong}"></h:outputText>
+    		</p:column>
+    	</p:dataTable>
+    	
+    		
+    </h:body>
+</html>

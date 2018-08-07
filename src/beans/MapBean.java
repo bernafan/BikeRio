@@ -4,6 +4,8 @@ import javax.annotation.PostConstruct;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
 
+import org.json.simple.parser.ParseException;
+
 import br.com.bikerio.services.RestApiBikeRio;
 
 @ManagedBean
@@ -18,18 +20,15 @@ public class MapBean {
 	public void init() {
 		
 	}
-
-	public String getEndereco() {
-		return endereco;
-	}
-
-	public void setEndereco(String endereco) {
-		this.endereco = endereco;
-	}
 	
 	public void search() {
 		
-		 restApi.search(this.endereco, this.cidade);
+		 try {
+			restApi.search(this.getEndereco(), this.cidade);
+		} catch (ParseException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
 	public String getCidade() {
@@ -38,5 +37,13 @@ public class MapBean {
 
 	public void setCidade(String cidade) {
 		this.cidade = cidade;
+	}
+
+	public String getEndereco() {
+		return endereco;
+	}
+
+	public void setEndereco(String endereco) {
+		this.endereco = endereco;
 	}
 }
